@@ -1,5 +1,17 @@
-
 # Spotify API Testing Project
+
+## What I Built
+As a QA enthusiast exploring API testing, I created this project to:
+- Practice authenticating with Spotify's OAuth 2.0
+- Validate CRUD operations on real-world APIs
+- Learn dynamic data handling in Postman
+- Document my testing process for future reference
+
+**Key components**:
+- Authentication workflow implementation
+- 5 core API endpoints tested
+- 15+ validation checks
+- Real-world verification in Spotify app
 
 ## Project Walkthrough
 - Importing collection
