@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "112db6c8-1b2c-4f2d-81c6-1cbd11f4684b",
+		"name": "Spotify API Testing",
+		"description": "CRUD operations for Spotify API testing.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38093385",
+		"_collection_link": "https://apiiii-5021.postman.co/workspace/apiiii-Workspace~7601c7da-b14d-4a04-9d7f-17529ee9b614/collection/38093385-112db6c8-1b2c-4f2d-81c6-1cbd11f4684b?action=share&source=collection_link&creator=38093385"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add Tracks to Playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uris\": [\"spotify:track:{{track_id}}\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/playlists/{{playlist_id}}/tracks",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"playlists",
+						"{{playlist_id}}",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Playlist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Playlist\",\r\n  \"description\": \"Modified via API\",\r\n  \"public\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/playlists/{{playlist_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"playlists",
+						"{{playlist_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete playlist",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenName",
+				"value": "Spotify_Token",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "\tuser-modify-private playlist-modify-public playlist-modify-private",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "f74ea840065f4f3f812360022342a797",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "ab1d57941ece472d83c3ded626677fe6",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://accounts.spotify.com/api/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://accounts.spotify.com/authorize",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://oauth.pstmn.io/v1/callback",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://api.spotify.com/v1",
+			"type": "string"
+		}
+	]
+}
